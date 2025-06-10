@@ -9,11 +9,8 @@ function setup() {
   noLoop();
 
   drawComposition(); 
-//Time-Based: 
-  let ms = millis(); // 
-  textAlign(LEFT, CENTER);
-  textSize(20);
-  text(`Startup time: ${round(ms, 2)} ms`, 10, 30);
+//Time-Based: Refresh every 2 seconds & Redraw
+  setInterval(updateColors, 2000); 
 }
 
 function windowResized() {
